@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <main class="w-full h-full">
+      <nav
+        class="bg-white shadow-md flex items-center justify-between h-16 px-5"
+      >
+        <div class="">
+          <h1 class="text-xl">Googel Drive</h1>
+        </div>
+        <div class="search w-2/5">
+          <input
+            placeholder="Search"
+            type="search"
+            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          />
+        </div>
+        <div class="h-10 w-10">
+          <img
+            src="http://github.com/hayat4144.png"
+            alt="userimage"
+            class="rounded-full"
+          />
+        </div>
+      </nav>
+      <aside
+        class="border-r border-gray-300 fixed left-0 h-full px-5 py-5 w-52"
+      >
+        <ul class="space-y-5">
+          <li>
+            <label
+              for="fileupload"
+              class="px-3 py-2 rounded-md text-center bg-blue-700 text-white h-10"
+            >
+              Upload
+              <input type="file" hidden multiple id="fileupload" />
+            </label>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3">
+              <i class="material-icons blue-text text-darken-1">dashboard</i>
+              <span>Drive</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3"
+              ><i class="material-icons">devices</i> <span>Computers</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3"
+              ><i class="material-icons">people</i
+              ><span>Shared with me</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3"
+              ><i class="material-icons">access_time</i>
+              <span>Recent</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3"
+              ><i class="material-icons">camera</i><span>Photos</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3"
+              ><i class="material-icons">star</i>
+              <span>Starred</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3"
+              ><i class="material-icons"> delete </i>
+              <span>Trash</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3"
+              ><i class="material-icons">cloud</i>
+              <span>Backups</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-3"
+              ><i class="material-icons">storage</i>
+              <span>Upgrade storage</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <div class="ml-56 my-5 mr-5">
+        <div class="" id="dropArea">
+          <table class="table-auto w-full">
+            <thead class="">
+              <tr class="border-b border-slate-200 font-medium">
+                <th>Name</th>
+                <th>Owner</th>
+                <th>Last Modified</th>
+                <th>File Size</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div
+        id="toast-default"
+        class="items-center hidden w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg border border-gray-300 absolute bottom-8 right-10"
+        role="alert"
+      >
+        <div class="ms-3 text-sm font-normal" id="notification"></div>
+      </div>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
